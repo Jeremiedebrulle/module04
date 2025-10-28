@@ -6,15 +6,13 @@
 /*   By: Jdebrull <jdebrull@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 16:37:50 by Jdebrull          #+#    #+#             */
-/*   Updated: 2025/10/28 15:23:21 by Jdebrull         ###   ########.fr       */
+/*   Updated: 2025/10/28 15:45:31 by Jdebrull         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
-#include "WrongAnimal.hpp"
-#include "WrongCat.hpp"
 #include "Brain.hpp"
 
 int	main()
