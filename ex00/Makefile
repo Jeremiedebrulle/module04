@@ -1,9 +1,9 @@
 CXX			= c++
 CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
 
-TARGET		= FragTrap
+TARGET		= animal
 
-SRCS		= main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
+SRCS		= main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp
 OBJDIR		= obj
 OBJS		= $(SRCS:%.cpp=$(OBJDIR)/%.o)
 
