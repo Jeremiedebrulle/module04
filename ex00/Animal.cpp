@@ -6,7 +6,7 @@
 /*   By: Jdebrull <jdebrull@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/26 16:18:19 by Jdebrull          #+#    #+#             */
-/*   Updated: 2025/10/27 19:41:24 by Jdebrull         ###   ########.fr       */
+/*   Updated: 2025/10/28 16:24:40 by Jdebrull         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ Animal::Animal() : type("default") {
 }
 
 Animal::Animal(const std::string& type) : type(type) {
-	std::cout	<< "Animal constructor called (type = " << type << ")" << std::endl;
+	std::cout	<< "Animal parameter constructor called (type = " << type << ")" << std::endl;
 }
 
 Animal::Animal(const Animal &other) : type(other.type) {

@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Jdebrull <jdebrull@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/26 13:39:38 by Jdebrull          #+#    #+#             */
-/*   Updated: 2025/10/29 13:17:39 by Jdebrull         ###   ########.fr       */
+/*   Created: 2025/10/26 13:39:07 by Jdebrull          #+#    #+#             */
+/*   Updated: 2025/10/29 13:14:31 by Jdebrull         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-# define CAT_HPP
+#ifndef DOG_HPP
+# define DOG_HPP
 
 # include <iostream>
-# include "Animal.hpp"
+# include "AAnimal.hpp"
 # include "Brain.hpp"
 
-class Cat : public Animal
+class Dog : public AAnimal
 {
 	public: 
-		Cat();
-		Cat(const std::string& type);
-		Cat(const Cat& other);
-		Cat&	operator=(const Cat& other);
-		~Cat();
+		Dog();
+		Dog(const std::string& type);
+		Dog(const Dog& other);
+		Dog&	operator=(const Dog& other);
+		~Dog();
 		
-		void				makeSound() const;
+		virtual void		makeSound() const;
 		void				setIdea(int i, const std::string& idea);
 		const std::string	getIdea(int i) const;
 
@@ -34,4 +34,4 @@ class Cat : public Animal
 		Brain* brain;
 };
 
-#endif
+#endif 

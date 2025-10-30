@@ -1,37 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   AMateria.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Jdebrull <jdebrull@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/26 13:39:38 by Jdebrull          #+#    #+#             */
-/*   Updated: 2025/10/29 13:17:39 by Jdebrull         ###   ########.fr       */
+/*   Created: 2025/10/29 15:58:52 by Jdebrull          #+#    #+#             */
+/*   Updated: 2025/10/29 17:17:33 by Jdebrull         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-# define CAT_HPP
+#ifndef AMATERIA_HPP
+# define AMATERIA_CPP
 
 # include <iostream>
-# include "Animal.hpp"
-# include "Brain.hpp"
 
-class Cat : public Animal
+class AMateria
 {
-	public: 
-		Cat();
-		Cat(const std::string& type);
-		Cat(const Cat& other);
-		Cat&	operator=(const Cat& other);
-		~Cat();
-		
-		void				makeSound() const;
-		void				setIdea(int i, const std::string& idea);
-		const std::string	getIdea(int i) const;
+	public:
+		AMateria();
+		AMateria(const std::string& type);
+
+		virtual AMateria*	clone() const = 0;
+		virtual	void		use(ICharacter& target);
+
+	protected:
 
 	private:
-		Brain* brain;
+		std::string	type;
 };
 
 #endif

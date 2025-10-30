@@ -6,7 +6,7 @@
 /*   By: Jdebrull <jdebrull@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 16:24:39 by Jdebrull          #+#    #+#             */
-/*   Updated: 2025/10/28 16:23:36 by Jdebrull         ###   ########.fr       */
+/*   Updated: 2025/10/29 14:26:53 by Jdebrull         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@ Dog::Dog() {
 }
 
 Dog::Dog(const std::string& type) {
-	std::cout	<< "Dog parameter constructor called (type = " << type << ")" << std::endl;
+	std::cout	<< "Dog constructor called (type = " << type << ")" << std::endl;
 	this->type = type;
 	this->brain = new Brain();
 }
 
-Dog::Dog(const Dog& other) : Animal(other) {
+Dog::Dog(const Dog& other) : AAnimal(other) {
 	std::cout	<< "Dog copy constructor called." << std::endl;
 	this->type = other.type;
 	this->brain = new Brain(*other.brain); // the new function makes sur cat and dog each get unique brain object
@@ -34,7 +34,7 @@ Dog&	Dog::operator=(const Dog& other) {
 	std::cout	<< "Dog assignment operator called" << std::endl;
 	if (this != &other)
 	{
-		Animal::operator=(other);
+		AAnimal::operator=(other);
 		this->type = other.type;
 		*this->brain = *other.brain; //dereference so as to assign content not pointer;
 	}

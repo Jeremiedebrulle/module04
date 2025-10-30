@@ -6,11 +6,11 @@
 /*   By: Jdebrull <jdebrull@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 16:37:50 by Jdebrull          #+#    #+#             */
-/*   Updated: 2025/10/29 13:22:11 by Jdebrull         ###   ########.fr       */
+/*   Updated: 2025/10/29 14:59:27 by Jdebrull         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
 #include "Brain.hpp"
@@ -18,30 +18,30 @@
 int	main()
 {
 	std::cout	<< "Initialization of dog: " << std::endl;
-	const Animal* jo = new Dog();
+	Dog* jo = new Dog();
 	std::cout	<< "\nInitialization of cat: " << std::endl;
-	const Animal* io = new Cat();
+	const AAnimal* io = new Cat();
 
-	std::cout	<< "\nFreeing the animals:\n" << std::endl;
+	std::cout	<< "\nFreeing the AAnimals:\n" << std::endl;
 	delete io; // should delete Cat and its Brain
 	std::cout	<< std::endl;
 	delete jo; // should delete Dog and its Brain
 
-	std::cout	<< "\n\n\nCreating the array of animals:\n" << std::endl;
+	std::cout	<< "\n\n\nCreating the array of AAnimals:\n" << std::endl;
 
 	int		a = 10;
-	Animal*	animals[a];
+	AAnimal*	AAnimals[a];
 
 	for (int i = 0; i < a; i++)
 	{
 		if (i % 2 == 0)
 		{
-			animals[i] = new Dog();
+			AAnimals[i] = new Dog();
 			std::cout	<< std::endl;
 		}
 		else
 		{
-			animals[i] = new Cat();
+			AAnimals[i] = new Cat();
 			std::cout	<< std::endl;
 		}
 	}
@@ -50,15 +50,15 @@ int	main()
 
 	for (int i = 0; i < a; i++)
 	{
-		std::cout	<< "Type of animal = " << animals[i]->getType() << std::endl;
-		animals[i]->makeSound();
+		std::cout	<< "Type of AAnimal = " << AAnimals[i]->getType() << std::endl;
+		AAnimals[i]->makeSound();
 	}
 
-	std::cout	<< "\nFreeing the array of animals:\n" << std::endl;
+	std::cout	<< "\nFreeing the array of AAnimals:\n" << std::endl;
 
 	for (int i = 9; i >= 0; i--)
 	{
-		delete (animals[i]);
+		delete (AAnimals[i]);
 		std::cout	<< std::endl;
 	}
 
@@ -77,6 +77,21 @@ int	main()
 	std::cout	<< "Dog1 is thinking of : " << dog1.getIdea(0) <<std::endl;
 	std::cout	<< "Dog2 is thinking of : " << dog2.getIdea(0) << std::endl;
 	std::cout	<< std::endl;
+
+	std::cout	<< "\n" << std::endl;
+
+	AAnimal* ptr = new Dog();
+	AAnimal& ref = *ptr;
+
+	std::cout	<< "\n" << std::endl;
+
+	ref.makeSound();
+	
+	std::cout	<< "\n" << std::endl; 
+	delete ptr;
+	std::cout	<< std::endl;
+	//std::cout	<< "Should produce error right about here..." << std::endl;
+	//AAnimal	a;
 
 	return 0;
 }

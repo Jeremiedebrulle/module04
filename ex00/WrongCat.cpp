@@ -6,7 +6,7 @@
 /*   By: Jdebrull <jdebrull@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 12:14:19 by Jdebrull          #+#    #+#             */
-/*   Updated: 2025/10/28 12:15:42 by Jdebrull         ###   ########.fr       */
+/*   Updated: 2025/10/28 16:24:14 by Jdebrull         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,13 @@ WrongCat::WrongCat() {
 }
 
 WrongCat::WrongCat(const std::string& type) {
-	std::cout	<< "WrongCat constructor called (type = " << type << ")" << std::endl;
+	std::cout	<< "WrongCat parameter constructor called (type = " << type << ")" << std::endl;
 	this->type = type;
+}
+
+WrongCat::WrongCat(const WrongCat& other) : WrongAnimal(other) {
+	std::cout	<< "WrongCat copy constructor called." << std::endl;
+	this->type = other.type;
 }
 
 WrongCat&	WrongCat::operator=(const WrongCat& other) {

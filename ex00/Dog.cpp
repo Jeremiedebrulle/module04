@@ -6,7 +6,7 @@
 /*   By: Jdebrull <jdebrull@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 16:24:39 by Jdebrull          #+#    #+#             */
-/*   Updated: 2025/10/28 13:02:55 by Jdebrull         ###   ########.fr       */
+/*   Updated: 2025/10/28 16:24:29 by Jdebrull         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Dog::Dog() {
 }
 
 Dog::Dog(const std::string& type) {
-	std::cout	<< "Dog constructor called (type = " << type << ")" << std::endl;
+	std::cout	<< "Dog parameter constructor called (type = " << type << ")" << std::endl;
 	this->type = type;
 }
 

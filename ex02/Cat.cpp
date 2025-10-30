@@ -6,7 +6,7 @@
 /*   By: Jdebrull <jdebrull@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 16:24:31 by Jdebrull          #+#    #+#             */
-/*   Updated: 2025/10/29 13:27:18 by Jdebrull         ###   ########.fr       */
+/*   Updated: 2025/10/29 14:26:38 by Jdebrull         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@ Cat::Cat() {
 }
 
 Cat::Cat(const std::string& type) {
-	std::cout	<< "Cat parameter constructor called (type = " << type << ")" << std::endl;
+	std::cout	<< "Cat constructor called (type = " << type << ")" << std::endl;
 	this->type = type;
 	this->brain = new Brain();
 }
 
-Cat::Cat(const Cat& other) : Animal(other) {
+Cat::Cat(const Cat& other) : AAnimal(other) {
 	std::cout	<< "Cat copy constructor called." << std::endl;
 	this->type = other.type;
 	this->brain = new Brain();
@@ -34,9 +34,9 @@ Cat&	Cat::operator=(const Cat& other) {
 	std::cout	<< "Cat assignment operator called" << std::endl;
 	if (this != &other)
 	{
-		Animal::operator=(other);
+		AAnimal::operator=(other);
 		this->type = other.type;
-		*this->brain = *other.brain; //this is the deep copy part, you copy the content of the brain and not just the address this->brain = other.brain; you just copy the adress;
+		*this->brain = *other.brain;		
 	}
 	return (*this);
 }

@@ -6,7 +6,7 @@
 /*   By: Jdebrull <jdebrull@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 16:24:31 by Jdebrull          #+#    #+#             */
-/*   Updated: 2025/10/28 13:03:05 by Jdebrull         ###   ########.fr       */
+/*   Updated: 2025/10/28 16:24:33 by Jdebrull         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Cat::Cat() {
 }
 
 Cat::Cat(const std::string& type) {
-	std::cout	<< "Cat constructor called (type = " << type << ")" << std::endl;
+	std::cout	<< "Cat parameter constructor called (type = " << type << ")" << std::endl;
 	this->type = type;
 }
 

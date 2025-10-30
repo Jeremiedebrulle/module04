@@ -1,9 +1,9 @@
 CXX			= c++
 CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
 
-TARGET		= animalwithbrains
+TARGET		= instantiation
 
-SRCS		= main.cpp Animal.cpp Dog.cpp Cat.cpp Brain.cpp
+SRCS		= main.cpp AAnimal.cpp Dog.cpp Cat.cpp Brain.cpp
 OBJDIR		= obj
 OBJS		= $(SRCS:%.cpp=$(OBJDIR)/%.o)
 
