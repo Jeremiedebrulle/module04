@@ -1,38 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AMateria.hpp                                       :+:      :+:    :+:   */
+/*   Ice.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdebrull <jdebrull@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/29 15:58:52 by Jdebrull          #+#    #+#             */
-/*   Updated: 2025/10/30 23:48:36 by jdebrull         ###   ########.fr       */
+/*   Created: 2025/10/30 23:55:57 by jdebrull          #+#    #+#             */
+/*   Updated: 2025/10/31 00:11:53 by jdebrull         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef AMATERIA_HPP
-# define AMATERIA_HPP
+#ifndef ICE_HPP
+# define ICE_HPP
 
 # include <iostream>
+# include "AMateria.hpp"
 
-class ICharacter;
-
-class AMateria
+class Ice : public AMateria
 {
 	public:
-		AMateria();
-		AMateria(const std::string& type);
-		AMateria(const AMateria& other);
-		AMateria& operator=(const AMateria& other);
-		virtual ~AMateria();
+		Ice();
+		Ice(const std::string& type);
+		Ice(const Ice& other);
+		Ice& operator=(const Ice& other);
+		virtual ~Ice();
 
-		virtual AMateria*	clone() const = 0;
-		virtual	void		use(ICharacter& target);
-
-		const std::string&	getType() const;
-
-	protected:
-		std::string	type;
+		AMateria*	clone() const;
+		void		use(ICharacter& target);
 
 };
 
