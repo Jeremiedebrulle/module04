@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cure.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdebrull <jdebrull@student.s19.be>         +#+  +:+       +#+        */
+/*   By: jdebrull <jdebrull@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 00:18:03 by jdebrull          #+#    #+#             */
-/*   Updated: 2025/10/31 00:22:55 by jdebrull         ###   ########.fr       */
+/*   Updated: 2025/11/03 13:13:26 by jdebrull         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ Cure::~Cure() {
 	std::cout	<< "Cure destructor called" << std::endl;
 }
 
-void	use(ICharacter& target) {
+void	Cure::use(ICharacter& target) {
 	std::cout	<< "* heals " << target.getName() << "‘s wounds *" << std::endl;
 }
 

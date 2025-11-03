@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Ice.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdebrull <jdebrull@student.s19.be>         +#+  +:+       +#+        */
+/*   By: jdebrull <jdebrull@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 00:02:59 by jdebrull          #+#    #+#             */
-/*   Updated: 2025/10/31 00:15:32 by jdebrull         ###   ########.fr       */
+/*   Updated: 2025/11/03 13:13:32 by jdebrull         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ Ice::~Ice() {
 	std::cout	<< "Ice destructor called" << std::endl;
 }
 
-void	use(ICharacter& target) {
+void	Ice::use(ICharacter& target) {
 	std::cout	<< "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
 }
 

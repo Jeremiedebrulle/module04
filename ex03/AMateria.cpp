@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AMateria.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jdebrull <jdebrull@student.s19.be>         +#+  +:+       +#+        */
+/*   By: jdebrull <jdebrull@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 23:35:12 by jdebrull          #+#    #+#             */
-/*   Updated: 2025/10/31 00:12:21 by jdebrull         ###   ########.fr       */
+/*   Updated: 2025/11/03 13:13:15 by jdebrull         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ AMateria::~AMateria() {
 	std::cout	<< "AMateria destructor called" << std::endl;
 }
 
-void	use(ICharacter& target) {
+void	Amateria::use(ICharacter& target) {
 	(void)target;
 }
 
